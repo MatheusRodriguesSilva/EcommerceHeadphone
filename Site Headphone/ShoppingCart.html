@@ -1,124 +1,199 @@
-<!--Create:Matheus Rodrigues da Silva //26/05/23 -->
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrinho de Compras</title>
-    <link rel="stylesheet" href="stylecart.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <main>
-      <div class="page-title">Seu Carrinho</div>
-      <div class="content">
-        <section>
-          <table>
-            <thead>
-              <tr>
-                <th>Produto</th>
-                <th>Preço</th>
-                <th>Quantidade</th>
-                <th>Total</th>
-                <th>-</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="product">
-                    <img src="img/main1.png" alt="" />
-                    <div class="info">
-                      <div class="name">Headphone azul</div>
-                      <div class="category">Categoria</div>
-                    </div>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrinho de Compras</title>
+  <link rel="stylesheet" href="stylecart.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <main>
+    <div class="page-title">Seu Carrinho</div>
+    <div class="content">
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Preço</th>
+              <th>Quantidade</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="product-row">
+              <td>
+                <div class="product">
+                  <img src="img/main1.png" alt="" />
+                  <div class="info">
+                    <div class="name">Headphone azul</div>
                   </div>
-                </td>
-                <td>$199.00</td>
-                <td>
-                  <div class="qty">
-                    <button><i class="bx bx-minus"></i></button>
-                    <span>2</span>
-                    <button><i class="bx bx-plus"></i></button>
+                </div>
+              </td>
+              <td class="price">$199.00</td>
+              <td>
+                <div class="qty">
+                  <button class="decrease-button"><i class="bx bx-minus"></i></button>
+                  <span class="quantity">2</span>
+                  <button class="increase-button"><i class="bx bx-plus"></i></button>
+                </div>
+              </td>
+              <td class="total">$398.00</td>
+              <td>
+                <button class="remove-button"><i class="bx bx-x"></i></button>
+              </td>
+            </tr>
+            <tr class="product-row">
+              <td>
+                <div class="product">
+                  <img src="img/main2.png" alt="" />
+                  <div class="info">
+                    <div class="name">Headphone marrom</div>
                   </div>
-                </td>
-                <td>$398.00</td>
-                <td>
-                  <button class="remove"><i class="bx bx-x"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="product">
-                    <img src="img/main2.png" alt="" />
-                    <div class="info">
-                      <div class="name">Headphone marrom</div>
-                      <div class="category">Categoria</div>
-                    </div>
+                </div>
+              </td>
+              <td class="price">$199.00</td>
+              <td>
+                <div class="qty">
+                  <button class="decrease-button"><i class="bx bx-minus"></i></button>
+                  <span class="quantity">2</span>
+                  <button class="increase-button"><i class="bx bx-plus"></i></button>
+                </div>
+              </td>
+              <td class="total">$398.00</td>
+              <td>
+                <button class="remove-button"><i class="bx bx-x"></i></button>
+              </td>
+            </tr>
+            <tr class="product-row">
+              <td>
+                <div class="product">
+                  <img src="img/main3.png" alt="" />
+                  <div class="info">
+                    <div class="name">Headphone preto</div>
                   </div>
-                </td>
-                <td>$199.00</td>
-                <td>
-                  <div class="qty">
-                    <button><i class="bx bx-minus"></i></button>
-                    <span>2</span>
-                    <button><i class="bx bx-plus"></i></button>
-                  </div>
-                </td>
-                <td>$398.00</td>
-                <td>
-                  <button class="remove"><i class="bx bx-x"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="product">
-                    <img src="img/main3.png" alt="" />
-                    <div class="info">
-                      <div class="name">Headphone preto</div>
-                      <div class="category">Categoria</div>
-                    </div>
-                  </div>
-                </td>
-                <td>$199.00</td>
-                <td>
-                  <div class="qty">
-                    <button><i class="bx bx-minus"></i></button>
-                    <span>2</span>
-                    <button><i class="bx bx-plus"></i></button>
-                  </div>
-                </td>
-                <td>$398.00</td>
-                <td>
-                  <button class="remove"><i class="bx bx-x"></i></button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <aside>
-          <div class="box">
-            <header>Resumo da compra</header>
-            <div class="info">
-              <div><span>Sub-total</span><span>$2388.00</span></div>
-              <div><span>Frete</span><span>Gratuito</span></div>
-            </div>
-            <footer>
-              <span>Total</span>
-              <span>$2388.00</span>
-            </footer>
+                </div>
+              </td>
+              <td class="price">$199.00</td>
+              <td>
+                <div class="qty">
+                  <button class="decrease-button"><i class="bx bx-minus"></i></button>
+                  <span class="quantity">2</span>
+                  <button class="increase-button"><i class="bx bx-plus"></i></button>
+                </div>
+              </td>
+              <td class="total">$398.00</td>
+              <td>
+                <button class="remove-button"><i class="bx bx-x"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <aside>
+        <div class="box">
+          <header>Resumo da compra</header>
+          <div class="info">
+            <div><span>Sub-total</span><span id="subtotal">$2388.00</span></div>
+            <div><span>Frete</span><span>Gratuito</span></div>
           </div>
-          <button>
-            <Link>
-              <a href="Creditcard.html" class="btn">Shop Now</a>
-            </Link>
-          </button>
-        </aside>
-      </div>
-    </main>
-  </body>
+          <footer>
+            <span>Total</span>
+            <span id="total">$2388.00</span>
+          </footer>
+        </div>
+        <button>
+          <a href="Creditcard.html" class="btn">Comprar Agora</a>
+        </button>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    // Função para atualizar o total do carrinho
+    function updateTotal() {
+      // Obter todos os elementos de linha de produtos
+      const productRows = document.getElementsByClassName('product-row');
+      let subtotal = 0;
+
+      // Iterar sobre as linhas de produtos
+      for (let i = 0; i < productRows.length; i++) {
+        const row = productRows[i];
+        const priceElement = row.querySelector('.price');
+        const quantityElement = row.querySelector('.quantity');
+        const totalElement = row.querySelector('.total');
+
+        // Obter o preço e a quantidade do produto atual
+        const price = parseFloat(priceElement.textContent.replace('$', ''));
+        const quantity = parseInt(quantityElement.textContent);
+
+        // Calcular o total da linha do produto
+        const total = price * quantity;
+
+        // Atualizar o valor total da linha do produto
+        totalElement.textContent = '$' + total.toFixed(2);
+
+        // Adicionar o total da linha do produto ao subtotal
+        subtotal += total;
+      }
+
+      // Atualizar o subtotal e o total no resumo da compra
+      const subtotalElement = document.getElementById('subtotal');
+      const totalElement = document.getElementById('total');
+      subtotalElement.textContent = '$' + subtotal.toFixed(2);
+      totalElement.textContent = '$' + subtotal.toFixed(2);
+    }
+
+    // Event listeners para os botões de aumento, diminuição e remoção de produtos
+    document.addEventListener('DOMContentLoaded', function () {
+      const decreaseButtons = document.getElementsByClassName('decrease-button');
+      const increaseButtons = document.getElementsByClassName('increase-button');
+      const removeButtons = document.getElementsByClassName('remove-button');
+
+      // Botões de diminuição
+      for (let i = 0; i < decreaseButtons.length; i++) {
+        const button = decreaseButtons[i];
+        button.addEventListener('click', function () {
+          const quantityElement = button.nextElementSibling;
+          let quantity = parseInt(quantityElement.textContent);
+
+          if (quantity > 1) {
+            quantity--;
+            quantityElement.textContent = quantity;
+            updateTotal();
+          }
+        });
+      }
+
+      // Botões de aumento
+      for (let i = 0; i < increaseButtons.length; i++) {
+        const button = increaseButtons[i];
+        button.addEventListener('click', function () {
+          const quantityElement = button.previousElementSibling;
+          let quantity = parseInt(quantityElement.textContent);
+
+          quantity++;
+          quantityElement.textContent = quantity;
+          updateTotal();
+        });
+      }
+
+      // Botões de remoção
+      for (let i = 0; i < removeButtons.length; i++) {
+        const button = removeButtons[i];
+        button.addEventListener('click', function () {
+          const row = button.parentNode.parentNode;
+          row.remove();
+          updateTotal();
+        });
+      }
+    });
+  </script>
+</body>
+
 </html>
